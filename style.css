@@ -3,8 +3,328 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-image: url('img/3. Background/Light/2.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'ghost', Arial, Helvetica, sans-serif;
+}
+
+.mobile{ 
+    display: flex;
+   justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    gap: 20px; 
+    height: 10px;
+    background-image: url('img/3. Background/Light/2.png');
+    backdrop-filter: blur(2px);
+} 
+
+#hud{ 
+    display: none;
+}
+.gamebutton{ 
+    height: 30px;
+}
+
+.gameover{ 
+    width: 400px;
+    margin-top: 200px;
+}
+
+.startgamebutton{ 
+    margin-top: 190px;
+    width: 300px;
+}
+
+.startgamebutton:hover{ 
+    cursor: pointer;
+}
+
+.tryagainbutton{ 
+    margin-top: 50px;
+    width: 300px;
+}
+
+.fullscreen{ 
+    width: 200px;
+}
+
+.fullscreen:hover{ 
+    cursor: pointer;
+}
+
+.blurfilter{
+    filter: blur(3.5px); 
+}
+
+.gameinstructions{ 
+    margin-top: 60px;
+    width: 300px;
+}
+
+.youwin{ 
+    margin-top: 200px;
+    height: 120px;
+    width: 320px;
+}
+#fixedButtons{ 
+    position: absolute;
+    display: flex;
+    top: 190px;
+    right: 620px;
+}
+
+#fixedButtons:hover{ 
+    cursor: pointer;
+}
+
+
+#overlay{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#container{ 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#container canvas, #overlay{ 
+    position: absolute;
+}
+h1{ 
+    font-size: 54px;
+    letter-spacing: 4px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
 }
 
 canvas{ 
-    background-color: black;
+    background-image: url('img/3. Background/Light/2.png');
+    background-size: cover;
+    display: block;
+}
+.turnphone{ 
+    display: none;
+}
+.rotate{ 
+    display: none;
+}
+@font-face {
+    font-family: 'ghost';
+    src: url('fonts/GhostNightDEMO!-DEMO.ttf') format('truetype'); 
+}  
+@media(max-width: 1650px){ 
+    #fixedButtons{ 
+        position: absolute;
+        display: flex;
+        top: 190px;
+        right: 470px;
+    }
+}
+@media(max-width: 1550px){ 
+    #fixedButtons{ 
+        position: absolute;
+        display: flex;
+        top: 190px;
+        right: 420px;
+    }
+}
+@media(max-width: 140px){ 
+    #fixedButtons{ 
+        position: absolute;
+        display: flex;
+        top: 190px;
+        right: 380px;
+    }
+}
+@media(max-width: 1350px){ 
+    #fixedButtons{ 
+        position: absolute;
+        display: flex;
+        top: 190px;
+        right: 320px;
+    }
+}
+@media(max-width: 1270px){ 
+    #fixedButtons{ 
+        position: absolute;
+        display: flex;
+        top: 190px;
+        right: 290px;
+    }
+}
+
+@media(max-width: 1200px){ 
+    #fixedButtons{ 
+        position: absolute;
+        display: flex;
+        top: 190px;
+        right: 250px;
+    }
+}
+
+@media(max-width: 1120px){ 
+    #fixedButtons{ 
+        position: absolute;
+        display: flex;
+        top: 190px;
+        right: 210px;
+    }
+}
+@media(max-width: 1025px){ 
+    #fixedButtons{ 
+        position: absolute;
+        display: flex;
+        top: 190px;
+        right: 180px;
+    }
+}
+@media(max-width: 950px){ 
+    #fixedButtons{ 
+        position: absolute;
+        display: flex;
+        top: 190px;
+        right: 130px;
+    }
+}
+
+@media(max-width: 850px){ 
+    #fixedButtons{ 
+        position: absolute;
+        display: flex;
+        top: 190px;
+        right: 80px;
+    }
+}
+
+@media(orientation: portrait){
+    .turnphone{ 
+        display: flex; 
+        position: absolute;
+        height: 50vh;
+       width: 70vw;
+    }
+    body{ 
+        background-color: aqua;
+        
+    }
+    canvas{ 
+        filter: blur(3.5px); 
+    }
+    #overlay{ 
+        filter: blur(3.5px); 
+    }
+    .gamebutton{ 
+        filter: blur(3.5px); 
+    }
+    #stopAudio{ 
+        display: none;
+    }
+
+    .fullscreen{ 
+        display: none;
+    }
+}
+@media only screen and (max-width: 720px) {
+    canvas{ 
+        width: 100%;
+        margin: 0;
+    }
+    #hud{ 
+        height: 10vh;
+        background-color: aqua;
+        margin: 0;
+        width: 100%;
+    }
+
+    #fixedButtons{ 
+        display: none;
+    }
+  
+    body { 
+        margin: 0;
+    }
+
+   
+    h1{ 
+        display: none;
+    } 
+  
+    .gameinstructions{ 
+        display: none;
+    }
+    body{ 
+        background-image: none;
+        align-items: normal;
+      
+    }
+    .startgamebutton{ 
+        margin: 0; 
+        width: 300px;
+     
+    }
+    #overlay {
+         width: 100%;
+    }
+    
+    #hud{ 
+        display: flex;
+    }
+    #stopAudio{ 
+        display: none;
+    }
+    .fullscreen{ 
+        display: none;
+    }
+    
+}
+@media only screen and (max-height: 480px){ 
+    body{ 
+        margin: 0;
+    }
+    canvas{ 
+        height: 90vh; 
+        margin: 0;
+    }
+
+    #hud{ 
+        display: flex;
+        height: 10vh;
+        background-image: url('img/3. Background/Dark/1.png');
+        width: 100%;
+        margin: 0;
+    }
+
+    h1{ 
+        display: none;
+    }
+
+
+     .gameinstructions{ 
+        display: none;
+    }
+    body{ 
+        background-image: none;
+        align-items: normal;
+    }
+    .startgamebutton{ 
+        margin: 0;
+        width: 300px;
+       
+    }
+    #overlay {
+        width: 100%;
+   }
+   #stopAudio{ 
+    display: none;
+} 
+.fullscreen{ 
+    display: none;
+}
+    
 }

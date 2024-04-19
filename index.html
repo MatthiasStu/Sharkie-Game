@@ -1,27 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Sharkie</title>
+    <link rel="icon" type="image" href="img\1.Sharkie\1.IDLE\11.png">
     <script src="classes/drawable-object.js"></script>
     <script src="classes/movable-object.class.js"></script>
     <script src="classes/character.class.js"></script>
     <script src="classes/jellyfish.class.js"></script>
-    <script src="classes/pufferfish.class.js"></script>
     <script src="classes/status-bar.class.js"></script>
+    <script src="classes/coinbar.call.js"></script>
+    <script src="classes/poisonbar.class.js"></script>
     <script src="classes/world.class.js"></script>
     <script src="classes/background-object.class.js"></script>
     <script src="classes/keyboard.class.js"></script>
     <script src="classes/level.class.js"></script>
+    <script src="classes/poison.class.js"></script>
     <script src="classes/endboss.class.js"></script>
+    <script src="classes/coins.class.js"></script>
     <script src="classes/throwable-object.class.js"></script>
     <script src="levels/level1.js"></script>
     <script src="js/game.js"></script>
 </head>
-<body onload="init()">
+
+<body>
+    <div id="container"></div>
     <h1>Sharkie</h1>
     <canvas id="canvas" width="720" height="480"></canvas>
+    <div class="fixedButtons" id="fixedButtons">
+        <img id="stopAudio" src="img/7. Mobile/SoundOn.png" onclick="stopAudio()">
+    </div>
+    <div id="overlay"><img class="startgamebutton" src="img\6.Botones\Start\1.png" onclick="init()">
+        <img class="gameinstructions" src="img\6.Botones\Instructions 2.png">
+        <img class="fullscreen" src="img\6.Botones\Full Screen\Mesa de trabajo 6.png" onclick="enablefullscreen()">
+    </div>
+    </div>
+    <div id="hud" class="mobile">
+        <img class="turnphone"  id="turnphone" src="img/7. Mobile/turnphone.png">
+        <img class="gamebutton" id="btnLeft" src="img/7. Mobile/left.png">
+        <img class="gamebutton" id="btnRight" src="img/7. Mobile/right.png">
+        <img class="gamebutton" id="btnUp" src="img/7. Mobile/up.png">
+        <img class="gamebutton" id="btnDown" src="img/7. Mobile/down.png">
+        <img class="gamebutton" id="btnAttack" src="img/7. Mobile/attack.png">
+    </div>
 </body>
 </html>

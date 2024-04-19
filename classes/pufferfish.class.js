@@ -1,3 +1,0 @@
-class pufferfish extends MovableObject{ 
- 
-}
